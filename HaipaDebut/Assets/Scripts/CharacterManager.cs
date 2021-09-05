@@ -7,5 +7,5 @@ public class CharacterManager : MonoBehaviour{
     public Sprite[] sprites;
     Image sprRend;
     void Awake(){sprRend=GetComponent<Image>();}
-    public void ChangeState(int i){sprRend.sprite=sprites[i];}
+    public void ChangeState(int i){if(sprRend!=null&&sprites[i]!=null)sprRend.sprite=sprites[i];}
 }

@@ -1,9 +1,11 @@
 EXTERNAL state(int i)
+{state(0)}
 Hey there, um just wanted to tell you that you have a nice outfit!
 
 * Oh, thank you, thats so nice.. You look really unique as well! I was just too embarassed to approach you..
-    Oh you're approaching me??
-    //{state(3)}
+    {state(3)}
+    Oh you're approaching me now??
+    ** [...]
 * Thanks I guess
 
 
@@ -14,23 +16,30 @@ Hey there, um just wanted to tell you that you have a nice outfit!
 * I do ocasionally, the hoodie is just for the meme.
  
 -Oh Im really into JoJo especially Part 4, just waiting for Part 6 anime and then Ill read Part 7
- 
-I also really enjoyed for ex. Maid Dragon, SK8, Death Note. As you can see I watch a lot of genres
- 
+   * [...]
+        I also really enjoyed for ex. Maid Dragon, SK8, Death Note.
+        As you can see I watch a lot of genres
+-
 * Oh I also like these!
     We have similar taste then! Do you play games by any chance?
 * Pretty cool
     Yeah, do you play games by any chance?
 * Trash taste!
+    {state(2)}
     Oh well.. do you play games?
 -
 * Of course
     Cool, if you wanna play together; my favorites Id like to stream are:..
 -
 *Wait did you say "stream"??
-    Um yeah.. Im actually a VTuber, I hope you're trustworthy..
+    {state(8)}
+    Did I really spill that?
+    ** [...]
+        {state(1)}
+        Um yeah.. Im actually a VTuber, I hope you're trustworthy..
 -
 *Damn thats so cool! So what games did you want to play??
+    {state(2)}
     ->games
 *Bruh, thats kinda cringe..
     {state(4)}
@@ -45,6 +54,7 @@ Oh yeah, I play mainly Dead by Daylight, osu, Minecraft, Terraria, Factorio, Spa
 Do you listen to any cool music?
 
 *I am quite into JPop and JRock
+    {state(2)}
     Same here!
     I mainly love TUYU, Eve, Polkadot Stingray
 *Mostly just the viral stuff

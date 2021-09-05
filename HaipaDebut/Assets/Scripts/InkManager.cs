@@ -69,14 +69,14 @@ public class InkManager : MonoBehaviour {
 	void CreateContentView (string text) {
 		TextMeshProUGUI storyText = Instantiate (textPrefab) as TextMeshProUGUI;
 		storyText.text = text;
-		storyText.transform.SetParent (canvas.transform, false);
+		storyText.transform.SetParent (textPanel.transform, false);
 	}
 
 	// Creates a button showing the choice text
 	Button CreateChoiceView (string text) {
 		// Creates the button from a prefab
 		Button choice = Instantiate (buttonPrefab) as Button;
-		choice.transform.SetParent (canvas.transform, false);
+		choice.transform.SetParent (buttonPanel.transform, false);
 		
 		// Gets the text from the button prefab
 		TextMeshProUGUI choiceText = choice.GetComponentInChildren<TextMeshProUGUI>();
@@ -91,17 +91,17 @@ public class InkManager : MonoBehaviour {
 
 	// Destroys all the children of this gameobject (all the UI)
 	void RemoveChildren () {
-		int childCount = canvas.transform.childCount;
-		for (int i = childCount - 1; i >= 0; --i) {
-			GameObject.Destroy (canvas.transform.GetChild (i).gameObject);
-		}
+		for(int i=textPanel.transform.childCount-1;i>=0;--i){Destroy(textPanel.transform.GetChild(i).gameObject);}
+		for(int i=buttonPanel.transform.childCount-1;i>=0;--i){Destroy(buttonPanel.transform.GetChild(i).gameObject);}
 	}
 
 	[SerializeField]TextAsset inkJSONAsset=null;
 	public Story story;
 
-	[SerializeField]Canvas canvas=null;
 	[SerializeField]CharacterManager cm;
+	[SerializeField]GameObject textPanel=null;
+	[SerializeField]GameObject buttonPanel=null;
+	
 
 	// UI Prefabs
 	[SerializeField]TextMeshProUGUI textPrefab=null;
