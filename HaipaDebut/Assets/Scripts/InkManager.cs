@@ -7,7 +7,7 @@ using TMPro;
 // This is a super bare bones example of how to play and display a ink story in Unity.
 public class InkManager : MonoBehaviour {
     public static event Action<Story> OnCreateStory;
-	
+
     void Awake () {
 		// Remove the default message
 		RemoveChildren();
@@ -18,7 +18,7 @@ public class InkManager : MonoBehaviour {
 	void StartStory () {
 		story = new Story (inkJSONAsset.text);
         if(OnCreateStory != null) OnCreateStory(story);
-		story.BindExternalFunction("change_state", (int i) =>{cm.ChangeState(i);});
+		story.BindExternalFunction("state",(int i) =>{cm.ChangeState(i);});
 		RefreshView();
 	}
 	
@@ -83,8 +83,8 @@ public class InkManager : MonoBehaviour {
 		choiceText.text = text;
 
 		// Make the button expand to fit the text
-		HorizontalLayoutGroup layoutGroup = choice.GetComponent<HorizontalLayoutGroup>();
-		layoutGroup.childForceExpandHeight = false;
+		//HorizontalLayoutGroup layoutGroup = choice.GetComponent<HorizontalLayoutGroup>();
+		//layoutGroup.childForceExpandHeight = false;
 
 		return choice;
 	}
@@ -97,16 +97,13 @@ public class InkManager : MonoBehaviour {
 		}
 	}
 
-	[SerializeField]
-	private TextAsset inkJSONAsset = null;
+	[SerializeField]TextAsset inkJSONAsset=null;
 	public Story story;
 
-	[SerializeField]
-	private Canvas canvas = null;
+	[SerializeField]Canvas canvas=null;
+	[SerializeField]CharacterManager cm;
 
 	// UI Prefabs
-	[SerializeField]
-	private TextMeshProUGUI textPrefab = null;
-	[SerializeField]
-	private Button buttonPrefab = null;
+	[SerializeField]TextMeshProUGUI textPrefab=null;
+	[SerializeField]Button buttonPrefab=null;
 }

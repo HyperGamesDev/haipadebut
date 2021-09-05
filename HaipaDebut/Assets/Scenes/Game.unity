@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 630801826}
   - component: {fileID: 630801825}
   m_Layer: 5
-  m_Name: BgCanvas
+  m_Name: MainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,10 +254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -339,6 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSONAsset: {fileID: 4900000, guid: b113c92d1dabbd140aca5352933248b9, type: 3}
   canvas: {fileID: 1975168515}
+  cm: {fileID: 1320805256}
   textPrefab: {fileID: 6574023851550709986, guid: 7846b8d0058ed6c488c5d66750e82a68, type: 3}
   buttonPrefab: {fileID: 3625659693718424799, guid: c576623cc92353f4c93dfa0c7a66cd4d, type: 3}
 --- !u!4 &915254222
@@ -402,8 +403,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158, y: 0}
-  m_SizeDelta: {x: 657, y: 439}
+  m_AnchoredPosition: {x: -415.448, y: 0.0033331}
+  m_SizeDelta: {x: 1609.98, y: 1080.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320805254
 MonoBehaviour:
@@ -464,6 +465,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c99f1dc63da753847ad535f8e595c947, type: 3}
   - {fileID: 21300000, guid: 7bbc1543c71db324eb5cfedb9bf42879, type: 3}
   - {fileID: 21300000, guid: da8749f1a52036743b81616dd4fc12e7, type: 3}
+  - {fileID: 21300000, guid: 77cf9b163e09c414db769dee1aa9ecdd, type: 3}
 --- !u!1 &1865548372
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,10 +581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -645,7 +647,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
+    m_Top: 10
     m_Bottom: 0
   m_ChildAlignment: 2
   m_Spacing: 0
@@ -668,7 +670,7 @@ GameObject:
   - component: {fileID: 1996940437}
   - component: {fileID: 1996940436}
   m_Layer: 5
-  m_Name: Image
+  m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,8 +692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 780, y: 439}
+  m_AnchoredPosition: {x: 0, y: -0.0013428}
+  m_SizeDelta: {x: 1920, y: 1080.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1996940436
 MonoBehaviour:
