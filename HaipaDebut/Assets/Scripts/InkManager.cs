@@ -54,13 +54,13 @@ public class InkManager : MonoBehaviour {
 		}
 		// If we've read all the content and there's no choices, the story is finished!
 		else {
-			Button choice = CreateChoiceView("End of story.\nRestart?");
+			Button choice=CreateChoiceView("End of story.\nRestart?");
 			choice.onClick.AddListener(delegate{
 				StartStory();
 			});
-			Button choice2 = CreateChoiceView("Bye!");
+			Button choice2=CreateChoiceView("Bye!");
 			choice2.onClick.AddListener(delegate{
-				Leave();
+				GameManager.instance.LoadMenu();
 			});
 		}
 	}
@@ -102,8 +102,6 @@ public class InkManager : MonoBehaviour {
 		for(int i=textPanel.transform.childCount-1;i>=0;--i){Destroy(textPanel.transform.GetChild(i).gameObject);}
 		for(int i=buttonPanel.transform.childCount-1;i>=0;--i){Destroy(buttonPanel.transform.GetChild(i).gameObject);}
 	}
-
-	void Leave(){UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");}
 
 	[SerializeField]TextAsset inkJSONAsset=null;
 	public Story story;
