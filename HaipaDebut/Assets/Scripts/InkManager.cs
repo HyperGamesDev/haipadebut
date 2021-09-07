@@ -22,6 +22,7 @@ public class InkManager : MonoBehaviour {
         if(OnCreateStory!=null)OnCreateStory(story);
 		story.BindExternalFunction("state",(int i) =>{cm.ChangeState(i);});
 		story.BindExternalFunction("bg",(int i) =>{bm.ChangeBg(i);});
+		story.BindExternalFunction("va",(int i) =>{vam.Play(i);});
 		RefreshView();
 	}
 	
@@ -31,6 +32,7 @@ public class InkManager : MonoBehaviour {
 	void RefreshView(){
 		// Remove all the UI on screen
 		RemoveChildren();
+		vam.StopAll();
 		
 		// Read all the content until we can't continue any more
 		while (story.canContinue) {
@@ -109,10 +111,11 @@ public class InkManager : MonoBehaviour {
 
 	[SerializeField]CharacterManager cm;
 	[SerializeField]BackgroundManager bm;
+	[SerializeField]VoiceActingManager vam;
+
 	[SerializeField]GameObject textPanel=null;
 	[SerializeField]GameObject buttonPanel=null;
 	
-
 	// UI Prefabs
 	[SerializeField]TextMeshProUGUI textPrefab=null;
 	[SerializeField]Button buttonPrefab=null;
