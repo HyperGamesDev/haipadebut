@@ -21,6 +21,7 @@ public class InkManager : MonoBehaviour {
 		story=new Story(inkJSONAsset.text);
         if(OnCreateStory!=null)OnCreateStory(story);
 		story.BindExternalFunction("state",(int i) =>{cm.ChangeState(i);});
+		story.BindExternalFunction("bg",(int i) =>{bm.ChangeBg(i);});
 		RefreshView();
 	}
 	
@@ -107,6 +108,7 @@ public class InkManager : MonoBehaviour {
 	public Story story;
 
 	[SerializeField]CharacterManager cm;
+	[SerializeField]BackgroundManager bm;
 	[SerializeField]GameObject textPanel=null;
 	[SerializeField]GameObject buttonPanel=null;
 	

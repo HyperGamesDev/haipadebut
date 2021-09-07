@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 1320805256}
   - component: {fileID: 1320805255}
   m_Layer: 5
-  m_Name: Character
+  m_Name: CharacterL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -507,6 +507,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7bbc1543c71db324eb5cfedb9bf42879, type: 3}
   - {fileID: 21300000, guid: da8749f1a52036743b81616dd4fc12e7, type: 3}
   - {fileID: 21300000, guid: 77cf9b163e09c414db769dee1aa9ecdd, type: 3}
+  - {fileID: 21300000, guid: 3d7dde340357ed84ea6bf9372f653ac0, type: 3}
 --- !u!1 &1863757557
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSONAsset: {fileID: 4900000, guid: b113c92d1dabbd140aca5352933248b9, type: 3}
   cm: {fileID: 1320805256}
+  bm: {fileID: 1996940438}
   textPanel: {fileID: 1863757557}
   buttonPanel: {fileID: 971284144}
   textPrefab: {fileID: 6574023851550709986, guid: 7846b8d0058ed6c488c5d66750e82a68, type: 3}
@@ -806,6 +808,7 @@ GameObject:
   - component: {fileID: 1996940435}
   - component: {fileID: 1996940437}
   - component: {fileID: 1996940436}
+  - component: {fileID: 1996940438}
   m_Layer: 5
   m_Name: bg
   m_TagString: Untagged
@@ -870,6 +873,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996940434}
   m_CullTransparentMesh: 1
+--- !u!114 &1996940438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996940434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1b1e0c81d24a74daf0eee935d10e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: a54a665df5e055e4291e67df12ec0650, type: 3}
+  - {fileID: 21300000, guid: 719f79ef32aed044fae8913747e7989f, type: 3}
 --- !u!1001 &1595507863459555825
 PrefabInstance:
   m_ObjectHideFlags: 0

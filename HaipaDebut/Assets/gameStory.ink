@@ -1,6 +1,6 @@
 EXTERNAL state(int i)
 {state(0)}
-Hey there, um just wanted to tell you that you have a nice outfit!
+Hey you also like that drink huh? Um I just wanted to tell you that you have a nice outfit!
 
 * Oh, thank you, thats so nice.. You look really unique as well! I was just too embarassed to approach you.. #you
     {state(3)}
@@ -17,7 +17,7 @@ Hey there, um just wanted to tell you that you have a nice outfit!
  
 -Oh Im really into JoJo especially Part 4, just waiting for Part 6 anime and then Ill read Part 7
    * [...]
-        I also really enjoyed for ex. Maid Dragon, SK8, Death Note.
+        I also really enjoyed for ex. Maid Dragon, Wotakoi, Death Note, SK8 etc
         As you can see I watch a lot of genres
 -
 * Oh I also like these! #you
@@ -66,5 +66,5 @@ Do you listen to any cool music?
 * [...]
 
 - I actually have to get ready for my debut, so I'll get going, you know where to find me, bye!
-    {state(0)}
+    {state(9)}
     -> END
