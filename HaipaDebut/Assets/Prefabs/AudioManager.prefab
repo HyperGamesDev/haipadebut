@@ -46,7 +46,16 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 6e8561e0ab8a6a946b23499d2c84971c, type: 2}
   mixerGroup: {fileID: 24300002, guid: 6e8561e0ab8a6a946b23499d2c84971c, type: 2}
   sounds:
-  - name: Fridge
+  - name: CitronTea
+    clip: {fileID: 8300000, guid: 6114d36fa94e3674f8c1f62adfaa89b5, type: 3}
+    volume: 0.03
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: fridge
     clip: {fileID: 8300000, guid: 4b2e5d607a10a514ab0dd5d82aa0e20f, type: 3}
     volume: 0.25
     volumeVariance: 0
@@ -55,12 +64,12 @@ MonoBehaviour:
     loop: 1
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: CitronTea
-    clip: {fileID: 8300000, guid: 6114d36fa94e3674f8c1f62adfaa89b5, type: 3}
-    volume: 0.03
+  - name: keyboardTyping
+    clip: {fileID: 8300000, guid: 87ec028da58bb4749843e43eecc139a6, type: 3}
+    volume: 0.25
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
-    loop: 1
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}

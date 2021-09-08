@@ -57,14 +57,15 @@ public class InkManager : MonoBehaviour {
 		}
 		// If we've read all the content and there's no choices, the story is finished!
 		else {
-			Button choice=CreateChoiceView("End of story.\nRestart?");
+			Button choice=CreateChoiceView("Bye!");
 			choice.onClick.AddListener(delegate{
-				StartStory();
+				GameManager.instance.LoadPC();
 			});
-			Button choice2=CreateChoiceView("Bye!");
+			/*Button choice2=CreateChoiceView("End of story.\nRestart?");
 			choice2.onClick.AddListener(delegate{
-				GameManager.instance.LoadMenu();
-			});
+				StartStory();
+			});*/
+			
 		}
 	}
 

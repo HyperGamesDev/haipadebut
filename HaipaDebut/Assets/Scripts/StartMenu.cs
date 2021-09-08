@@ -9,7 +9,7 @@ public class StartMenu : MonoBehaviour{
     [SerializeField] GameObject hand;
     [SerializeField] TMPro.TextMeshProUGUI text;
     void Start(){
-        AudioManager.instance.Play("Fridge");
+        AudioManager.instance.Play("fridge");
         AudioManager.instance.Play("CitronTea");
         bg2.GetComponent<BackgroundManager>().ChangeBg(0);
         mainMenuPanel.SetActive(true);
@@ -20,7 +20,7 @@ public class StartMenu : MonoBehaviour{
     }
     public void StartButton(){StartCoroutine(StartButtonI());}
     IEnumerator StartButtonI(){
-        AudioManager.instance.StopPlaying("Fridge");
+        AudioManager.instance.StopPlaying("fridge");
         mainMenuPanel.SetActive(false);
         secondPanel.SetActive(true);
         bg2.SetActive(true);

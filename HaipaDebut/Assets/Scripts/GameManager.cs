@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour{
     }
 
 
-    public void LoadGame(){SceneManager.LoadScene("Game");}
     public void LoadMenu(){SceneManager.LoadScene("Menu");}
+    public void LoadGame(){SceneManager.LoadScene("Game");}
+    public void LoadPC(){SceneManager.LoadScene("PC");}
 }
